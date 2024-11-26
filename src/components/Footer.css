@@ -1,0 +1,86 @@
+body {
+    background-color: aliceblue;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.logoContainer img {
+    height: 50px;
+    width: auto;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoContainer .links a {
+    margin: 0px 10px;
+    text-decoration: underline;
+    text-decoration-color: #fc5620;
+    color: white;
+    transition: box-shadow .5s ease-in-out;
+}
+
+.logoContainer .links a:hover {
+    box-shadow: inset 100px 0 0 0 #fc5620;
+}
+
+.linksContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.linksContainer a {
+    margin: 0px 15px;
+}
+
+.linksContainer a svg {
+    height: 30px;
+    width: 30px;
+    transition: all .5s ease-in-out;
+    fill: white;
+}
+
+.linksContainer a:hover svg {
+    transform: scale(1.2);
+    fill: #fc5620;
+}
+
+.copyrightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .copyrightContainer {
+        order: 3;
+    }
+
+    .linksContainer, .logoContainer {
+        margin-bottom: 20px;
+    }
+
+}
